@@ -18,8 +18,8 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
-  prawn
-  roo
+  prawn (~> 2.3.0)
+  roo (~> 2.8.0)
 
 BUNDLED WITH
    1.17.2
