@@ -29,7 +29,6 @@ puts "最後の列番号: #{sheet.last_column}  最後の行番号: #{sheet.last
   pdf.image("./infiles/background.png", at: [0,pdf.cursor])
 
   # 描画エリアを定義
-  # cursorはまだ上
   pdf.bounding_box([10, pdf.cursor-10], width: 500) do
     # 'B3'セルを参照する場合はsheet.cell(3, 2) or sheet.cell(3, 'B')
 
@@ -49,7 +48,6 @@ puts "最後の列番号: #{sheet.last_column}  最後の行番号: #{sheet.last
     pdf.move_down 15
     pdf.font_size(14)
     message = sheet.cell(idx, "E")
-    #pdf.draw_text message, color: "c9dfed", at: [ 50, pdf.cursor]
     pdf.text message, color: "c9dfed"
 
     # チェック
